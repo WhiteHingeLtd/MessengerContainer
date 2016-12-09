@@ -47,6 +47,7 @@ Partial Class Messenger
         '
         'NotificationCheck
         '
+        Me.NotificationCheck.Enabled = True
         Me.NotificationCheck.Interval = 1000
         '
         'Messenger
