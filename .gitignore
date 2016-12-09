@@ -45,3 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+MessengerContainer/bin/*.*
+MessengerContainer/bin/*
+MessengerContainer/obj/
+.exe
+.dll
+*.pfx
+packages/*
+.vs/MessengerContainer/v14/.suo
