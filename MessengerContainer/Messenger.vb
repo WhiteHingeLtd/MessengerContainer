@@ -14,7 +14,8 @@ Public Class Messenger
         For Each Thread As ArrayList In Notifications
             If Convert.ToInt32(Thread(3)) = 0 Then
                 SendNotification(Thread(1), Convert.ToInt32(EmployeeID))
-                WHLClasses.MySQL.insertUpdate("UPDATE whldata.messenger_threads set Notified='1' WHERE threadid ='" + Thread(1).ToString + "';")
+                Dim Response = WHLClasses.MySQL.insertUpdate("UPDATE whldata.messenger_threads set Notified='1' WHERE threadid ='" + Thread(1).ToString + "';")
+                MsgBox(Response)
             End If
         Next
 
@@ -24,6 +25,8 @@ Public Class Messenger
 
         EmployeeID = WebControl2.ExecuteJavascriptWithResult("employee;").ToString
         ActiveThread = WebControl2.ExecuteJavascriptWithResult("threadid;").ToString
+        Timer1.Enabled = True
+        NotificationCheck.Enabled = True
     End Sub
     Public Sub SendNotification(ThreadID, EmployeeID)
         Dim ThreadUsers As New ArrayList
@@ -38,5 +41,11 @@ Public Class Messenger
         Dim Notification As New NotificationBase
         Notification.ThreadUsers.Text = ThreadString
         Notification.Show()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        EmployeeID = WebControl2.ExecuteJavascriptWithResult("employee;").ToString
+        ActiveThread = WebControl2.ExecuteJavascriptWithResult("threadid;").ToString
+
     End Sub
 End Class

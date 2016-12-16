@@ -27,6 +27,7 @@ Partial Class Messenger
         Me.WebControl1 = New Awesomium.Windows.Forms.WebControl(Me.components)
         Me.WebControl2 = New Awesomium.Windows.Forms.WebControl(Me.components)
         Me.NotificationCheck = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'WebControl1
@@ -47,8 +48,10 @@ Partial Class Messenger
         '
         'NotificationCheck
         '
-        Me.NotificationCheck.Enabled = True
         Me.NotificationCheck.Interval = 1000
+        '
+        'Timer1
+        '
         '
         'Messenger
         '
@@ -66,4 +69,5 @@ Partial Class Messenger
     Private WithEvents WebControl1 As Awesomium.Windows.Forms.WebControl
     Private WithEvents WebControl2 As Awesomium.Windows.Forms.WebControl
     Friend WithEvents NotificationCheck As Timer
+    Friend WithEvents Timer1 As Timer
 End Class

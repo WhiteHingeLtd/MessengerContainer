@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class NotificationBase
-    Inherits System.Windows.Forms.UserControl
+    Inherits System.Windows.Forms.Form
 
     'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -33,10 +33,10 @@ Partial Class NotificationBase
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(288, 29)
+        Me.Label1.Size = New System.Drawing.Size(228, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "You have a new Message"
         '
@@ -53,10 +53,10 @@ Partial Class NotificationBase
         'ThreadUsers
         '
         Me.ThreadUsers.AutoSize = True
-        Me.ThreadUsers.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ThreadUsers.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ThreadUsers.Location = New System.Drawing.Point(101, 32)
         Me.ThreadUsers.Name = "ThreadUsers"
-        Me.ThreadUsers.Size = New System.Drawing.Size(133, 20)
+        Me.ThreadUsers.Size = New System.Drawing.Size(101, 15)
         Me.ThreadUsers.TabIndex = 2
         Me.ThreadUsers.Text = "Your thread with :"
         '
@@ -78,12 +78,14 @@ Partial Class NotificationBase
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(377, 109)
         Me.Controls.Add(Me.CloseNotification)
         Me.Controls.Add(Me.ThreadUsers)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "NotificationBase"
-        Me.Size = New System.Drawing.Size(373, 105)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
