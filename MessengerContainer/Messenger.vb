@@ -2,9 +2,12 @@
 Public Class Messenger
 
     Private Sub NotificationCheck_Tick(sender As Object, e As EventArgs) Handles NotificationCheck.Tick
-        If EmployeeID > 0 Then
-            GetNotifications(EmployeeID)
-        End If
+        Try
+            If EmployeeID > 0 Then
+                GetNotifications(EmployeeID)
+            End If
+        Catch ex As Exception
+        End Try
     End Sub
     Public Sub GetNotifications(EmployeeID)
         'Here we check for the Notification Status. For each thread that is new we send a new notification. 0 is not notified, 1 is NotificationSent, 2 is NotificationRead
