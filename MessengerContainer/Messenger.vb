@@ -47,8 +47,12 @@ Public Class Messenger
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        EmployeeID = WebControl2.ExecuteJavascriptWithResult("employee;").ToString
-        ActiveThread = WebControl2.ExecuteJavascriptWithResult("threadid;").ToString
+
+        Try
+            EmployeeID = WebControl2.ExecuteJavascriptWithResult("employee;").ToString
+            ActiveThread = WebControl2.ExecuteJavascriptWithResult("threadid;").ToString
+        Catch ex As Exception
+        End Try
 
     End Sub
 End Class

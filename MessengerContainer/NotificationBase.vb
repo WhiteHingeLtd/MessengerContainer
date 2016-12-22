@@ -2,7 +2,8 @@
 Public Class NotificationBase
     Dim StartPos As Integer = 12
     Private Sub NotificationBase_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Location = New Drawing.Point(My.Computer.Screen.Bounds.Width, StartPos)
+
+        Me.Location = New Drawing.Point(My.Computer.Screen.Bounds.Width, My.Computer.Screen.Bounds.Height)
     End Sub
 
     Private Sub CloseNotification_Click(sender As Object, e As EventArgs) Handles CloseNotification.Click

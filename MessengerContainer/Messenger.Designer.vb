@@ -52,6 +52,7 @@ Partial Class Messenger
         '
         'Timer1
         '
+        Me.Timer1.Enabled = True
         '
         'Messenger
         '
